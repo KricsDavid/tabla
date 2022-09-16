@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>tabla</title>
+
+	<style>
+		.tabla {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+		}
+
+		.tabla::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: repeating-linear-gradient(
+					0deg, #000 0, #000 40px,
+					#fff 40px, #fff 80px);
+		}
+
+		.tabla::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: repeating-linear-gradient(
+				90deg, #000 0, #000 40px,
+				#fff 40px, #fff 80px);
+			mix-blend-mode: difference;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="tabla"></div>
+</body>
+
+</html>
